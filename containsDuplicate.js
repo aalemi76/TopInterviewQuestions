@@ -1,6 +1,6 @@
 // Contains Duplicate
 
-var containsDuplicate = function (nums) {
+const containsDuplicate = function (nums) {
   const dict = {};
 
   for (let number of nums) {
@@ -12,7 +12,3 @@ var containsDuplicate = function (nums) {
   }
   return false;
 };
-
-const dict = {};
-dict[1] = 1;
-console.log(dict[1]);
