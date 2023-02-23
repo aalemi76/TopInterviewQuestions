@@ -13,17 +13,22 @@ const isBadVersion = function (version) {
  * @param {function} isBadVersion()
  * @return {function}
  */
-var solution = function (isBadVersion) {
+`var solution = function (isBadVersion) {
   /**
    * @param {integer} n Total versions
    * @return {integer} The first bad version
    */
   return function (n) {
-    let k = n;
-    while (k > 0) {
-      k--;
-      if (!isBadVersion(k)) return k + 1;
+    let low = 0;
+    let high = n;
+    while (low < high) {
+      const mid = Math.floor((low + high) / 2);
+      if (!isBadVersion(mid)) {
+        low = mid + 1;
+      } else {
+        high = mid;
+      }
     }
-    return k;
+    return low;
   };
-};
+};`;
