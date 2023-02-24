@@ -67,9 +67,6 @@ var minStack = new MinStack();
 minStack.push(0);
 minStack.push(1);
 minStack.push(0);
-console.log(minStack.mins, minStack.stack);
 console.log(minStack.getMin()); // return -3
-console.log(minStack.mins, minStack.stack);
 minStack.pop();
-console.log(minStack.mins, minStack.stack);
 console.log(minStack.getMin()); // return -2
